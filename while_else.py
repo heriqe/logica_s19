@@ -1,15 +1,12 @@
-# Exercício Python: While com Else
-# Crie um laço loop while que se repete 
-# enquanto uma determinada condição for verdadeira.
-
-# O loop while deve ter um else para 
-# executar quanto o loop while for finalizado 
-# normalmente.
-
-# A implementação deve pedir por um número 
-# maior que 1 e menor ou igual 100 e verificar 
-# se a condição é verdadeira, 
-# faça um loop while para verificar também 
-# se o número é um número primo.
-
-# Atenção: não faça uma condição loop `divisor <= numero`
+numero = int(input("Digite um número maior que 1 e menor ou igual a 100: "))
+if 1 < numero <= 100:
+    divisor = 2
+    while divisor * divisor <= numero:
+        if numero % divisor == 0:
+            print(f"{numero} não é um número primo.")
+            break
+        divisor += 1
+    else:
+        print(f"{numero} é um número primo.")
+else:
+    print("Número fora do intervalo permitido.")
