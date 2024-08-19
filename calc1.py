@@ -17,8 +17,14 @@ joao = {
 
 pessoas = [gabriel, carol, joao]
 
-# Implemente um loop for 
-# para exibir por pessoa o:
-# total gasto
-# o menor valor gasto
-# o maior valor gasto
+for pessoa in pessoas:
+    nome = pessoa['nome']
+    gastos = pessoa['gastos']
+    total_gasto = int(sum(gastos))
+    menor_gasto = int(min(gastos))
+    maior_gasto = int(max(gastos))
+    
+    print(f"{nome}:")
+    print(f"  Total gasto: R${total_gasto}")
+    print(f"  Menor valor gasto: R${menor_gasto}")
+    print(f"  Maior valor gasto: R${maior_gasto}")
